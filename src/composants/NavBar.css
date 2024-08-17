@@ -1,0 +1,64 @@
+/* NavBar.css */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 10px 20px;
+    color: #fff;
+    position: relative; /* Assurez-vous que cela est positionné relativement */
+  }
+  
+  .menu-icon {
+    display: none; /* Cacher par défaut */
+    cursor: pointer;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex; /* Afficher les liens en ligne */
+    gap: 20px;
+  }
+  
+  .nav-links li {
+    display: inline; /* Afficher chaque lien en ligne */
+  }
+  
+  .nav-links li a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  /* Media query pour mobile */
+  @media screen and (max-width: 768px) {
+    .menu-icon {
+      display: block; /* Afficher l'icône du menu sur les petits écrans */
+    }
+  
+    .nav-links {
+      display: none; /* Cacher les liens par défaut sur mobile */
+      flex-direction: column; /* Alignement en colonne pour le menu mobile */
+      background-color: #333;
+      position: absolute; /* Positionnement absolu */
+      top: 50px; /* Ajustez la position selon la hauteur de la barre de navigation */
+      right: 0;
+      width: 100%; /* Prendre toute la largeur */
+      text-align: center;
+    }
+  
+    .nav-links.active {
+      display: flex; /* Afficher les liens lorsque le menu est ouvert */
+    }
+  
+    .nav-links li {
+      margin: 20px 0; /* Espacement vertical entre les liens */
+    }
+  }
+  
+
+  .profile-photo {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+  }

@@ -1,0 +1,46 @@
+/* src/App.css */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Responsive layout */
+.accueil, .projects, .competences, .apropos, .contact {
+  padding: 20px;
+  margin: 20px 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2em;
+  }
+
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5em;
+  }
+
+  .profile-photo {
+    width: 100px;
+    height: 100px;
+  }
+}

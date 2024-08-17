@@ -1,0 +1,23 @@
+#competences {
+    padding: 20px;
+    background-color: #e0f2f1;
+  }
+  
+  #competences h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #00796b;
+  }
+  
+  #competences ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+  }
+  
+  #competences li {
+    font-size: 1.2rem;
+    color: #004d40;
+    margin: 10px 0;
+  }
+  

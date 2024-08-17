@@ -1,0 +1,35 @@
+.accueil{
+    text-align: center;
+    padding: 50px;
+    background-color: #e0f2f1;
+}
+
+
+.accueil h1{
+    font-size:2.5em;
+    margin-bottom: 20px;
+}
+
+.home p{
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+.button{
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: red;
+}
+
+.profile-photo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+  }

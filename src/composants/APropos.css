@@ -1,0 +1,17 @@
+#a-propos {
+    padding: 20px;
+    background-color: #fff;
+  }
+  
+  #a-propos h1 {
+    font-size: 2rem;
+    text-align: center;
+    color: #00796b;
+  }
+  
+  #a-propos p {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #004d40;
+  }
+  
