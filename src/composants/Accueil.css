@@ -1,10 +1,16 @@
-.accueil{
-    text-align: center;
-    padding: 50px;
-    background-color: #e0f2f1;
-}
-
-
+.accueil {
+    height: 100vh;
+    background-color: #f8f9fa;
+    padding-top: 60px; /* Pour compenser la barre de navigation fixe */
+  }
+  
+  .profile-photo {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border: 5px solid #343a40;
+  }
+  
 .accueil h1{
     font-size:2.5em;
     margin-bottom: 20px;
@@ -27,9 +33,3 @@
 button:hover{
     background-color: red;
 }
-
-.profile-photo {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-  }

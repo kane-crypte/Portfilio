@@ -1,16 +1,18 @@
+// src/composants/Competences.js
 import React from 'react';
-import './Competences.css'; // Import du fichier CSS
+import './Competences.css';
 
 const Competences = () => {
   return (
-    <section id="competences">
-      <h1>Mes Compétences</h1>
-      <ul>
-        <li>Compétence 1</li>
-        <li>Compétence 2</li>
-        <li>Compétence 3</li>
-        {/* Ajoutez plus de compétences ici */}
-      </ul>
+    <section id="competences" className="competences py-5">
+      <div className="container">
+        <h2 className="text-center mb-4">Mes Compétences</h2>
+        <ul className="list-unstyled text-center">
+          <li>Compétence 1</li>
+          <li>Compétence 2</li>
+          <li>Compétence 3</li>
+        </ul>
+      </div>
     </section>
   );
 };
