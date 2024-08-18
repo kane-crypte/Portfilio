@@ -1,69 +1,29 @@
-// src/composants/Contact.js
-import React, { useState } from 'react';
+import React from 'react';
+import './Contact.css';
 
-import './Contact.css'
-
-const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // Ici, vous pouvez ajouter la logique pour soumettre les données du formulaire
-    console.log('Form data submitted:', formData);
-  };
-
+function Contact() {
   return (
-    <div className='contact'>
-      <h1>Contactez-nous</h1>
-      <form onSubmit={handleSubmit}>
-        <div>
-          <label htmlFor="name">Nom:</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="email">Email:</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div>
-          <label htmlFor="message">Message:</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          ></textarea>
-        </div>
-        <button type="submit">Envoyer</button>
-      </form>
-    </div>
+    <section id="contact" className="contact py-5">
+      <div className="container">
+        <h2 className="text-center mb-4">Contactez-moi</h2>
+        <form>
+          <div className="mb-3">
+            <label for="name" className="form-label">Nom</label>
+            <input type="text" className="form-control" id="name" placeholder="Votre nom" />
+          </div>
+          <div className="mb-3">
+            <label for="email" className="form-label">Email</label>
+            <input type="email" className="form-control" id="email" placeholder="Votre email" />
+          </div>
+          <div className="mb-3">
+            <label for="message" className="form-label">Message</label>
+            <textarea className="form-control" id="message" rows="3" placeholder="Votre message"></textarea>
+          </div>
+          <button type="submit" className="btn btn-primary">Envoyer</button>
+        </form>
+      </div>
+    </section>
   );
-};
+}
 
 export default Contact;

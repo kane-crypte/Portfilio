@@ -1,47 +1,27 @@
-// src/composants/NavBar.js
 import React, { useState } from 'react';
+import { Navbar, Nav, NavDropdown, Container } from 'react-bootstrap';
 import './NavBar.css';
 
-function NavBar() {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggleMenu = () => {
-    setIsOpen(!isOpen);
-  };
-
-  const closeMenu = () => {
-    setIsOpen(false);
-  };
+function NavigationBar() {
+  const [expanded, setExpanded] = useState(false);
 
   return (
-    <nav className="navbar">
-      <div className="navbar-logo">
-        Mon Portfolio
-        </div>
-      <div className={`menu-icon ${isOpen ? 'open' : ''}`} onClick={toggleMenu}>
-        <i className="fas fa-bars"></i>
-      </div>
-      
-      <ul className={`nav-links ${isOpen ? 'active' : ''}`}>
-        
-        <li onClick={closeMenu}>
-          <a href="#accueil">Accueil</a>
-        </li>
-        <li onClick={closeMenu}>
-          <a href="#projects">Projets</a>
-        </li>
-        <li onClick={closeMenu}>
-          <a href="#competences">Compétences</a>
-        </li>
-        <li onClick={closeMenu}>
-          <a href="#apropos">À propos</a>
-        </li>
-        <li onClick={closeMenu}>
-          <a href="#contact">Contact</a>
-        </li>
-      </ul>
-    </nav>
+    <Navbar expanded={expanded} expand="lg" bg="dark" variant="dark" fixed="top">
+      <Container>
+        <Navbar.Brand href="#accueil">Mon Portfolio</Navbar.Brand>
+        <Navbar.Toggle aria-controls="basic-navbar-nav" onClick={() => setExpanded(expanded ? false : "expanded")} />
+      <Navbar.Collapse id="basic-navbar-nav">
+        <Nav className="ms-auto">
+          <Nav.Link href="#accueil" className="me-3  text-white border border-light rounded" onClick={() => setExpanded(false)}>Accueil</Nav.Link>
+          <Nav.Link href="#projects" className="me-3  text-white border border-light rounded" onClick={() => setExpanded(false)}>Projets</Nav.Link>
+          <Nav.Link href="#competences" className="me-3 text-white border border-light rounded" onClick={() => setExpanded(false)}>Compétences</Nav.Link>
+          <Nav.Link href="#apropos" className="me-3  text-white border border-light rounded" onClick={() => setExpanded(false)}>À propos</Nav.Link>
+          <Nav.Link href="#contact" className="me-3  text-white border border-light rounded" onClick={() => setExpanded(false)}>Contact</Nav.Link>
+        </Nav>
+      </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
-export default NavBar;
+export default NavigationBar;

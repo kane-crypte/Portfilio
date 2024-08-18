@@ -23,6 +23,7 @@
   
   .nav-links li {
     display: inline; /* Afficher chaque lien en ligne */
+   
   }
   
   .nav-links li a {
@@ -53,6 +54,8 @@
   
     .nav-links li {
       margin: 20px 0; /* Espacement vertical entre les liens */
+      border: 10px;
+      background-color: aquamarine;
     }
   }
   

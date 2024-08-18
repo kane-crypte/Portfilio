@@ -1,6 +1,8 @@
 // src/App.js
 import React from 'react';
 import './App.css';
+// src/index.js ou src/App.js
+import 'bootstrap/dist/css/bootstrap.min.css';
 import NavBar from './composants/NavBar';
 import Accueil from './composants/Accueil';
 import Projects from './composants/Projects';
